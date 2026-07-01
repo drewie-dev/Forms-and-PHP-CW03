@@ -1,11 +1,6 @@
 <?php
-// sucker.php
-// Handles the Buy-a-Grade form: validates required fields, displays
-// submitted values, and appends a clean record to suckers.html.
 
-// ---------------------------------------------------------
 // Exercise 5: Basic Validation (runs first, before anything else)
-// ---------------------------------------------------------
 $required = ['name', 'section', 'cardnumber', 'cardtype'];
 
 foreach ($required as $field) {
@@ -16,9 +11,8 @@ foreach ($required as $field) {
     }
 }
 
-// ---------------------------------------------------------
+
 // Exercise 3: Display Input Data
-// ---------------------------------------------------------
 echo '<h1>Raw Form Data</h1>';
 echo '<pre>';
 print_r($_POST);
@@ -30,9 +24,8 @@ echo '<p>Section: ' . htmlspecialchars($_POST['section']) . '</p>';
 echo '<p>Card Number: ' . htmlspecialchars($_POST['cardnumber']) . '</p>';
 echo '<p>Card Type: ' . htmlspecialchars($_POST['cardtype']) . '</p>';
 
-// ---------------------------------------------------------
+
 // Exercise 4: Save Form Data
-// ---------------------------------------------------------
 $name       = trim($_POST['name']);
 $section    = trim($_POST['section']);
 $cardnumber = trim($_POST['cardnumber']);
